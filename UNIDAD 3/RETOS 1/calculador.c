@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h> // Para sqrt()
 
-// ===== FUNCIONES DE LA LEY DE OHM =====
+// FUNCIONES DE LA LEY DE OHM 
 void calcular_voltaje() {
     float I, R, V;
     printf("\nIngrese la corriente (A): ");
@@ -61,7 +61,7 @@ void menu_ley_ohm() {
     } while (opcion != 4);
 }
 
-// ===== FUNCIONES DEL FACTOR DE POTENCIA =====
+// FUNCIONES DEL FACTOR DE POTENCIA 
 void calcular_factor_potencia() {
     float P, S, FP;
     printf("\nIngrese la Potencia Activa (W): ");
@@ -109,7 +109,7 @@ void menu_factor_potencia() {
     } while (opcion != 3);
 }
 
-// ===== MENÚ PRINCIPAL =====
+// MENÚ PRINCIPAL 
 void menu_principal() {
     int opcion;
     do {
@@ -174,7 +174,7 @@ void menu_resistencia_conductor() {
     } while (opcion != 2);
 }
 
-// ===== MENÚ PRINCIPAL =====
+//  MENÚ PRINCIPAL 
 void menu_principal() {
     int opcion;
     do {
@@ -196,7 +196,7 @@ void menu_principal() {
     } while (opcion != 4);
 }
 
-// ===== FUNCIÓN PRINCIPAL (MAIN) =====
+// FUNCIÓN PRINCIPAL (MAIN)
 int main() {
     menu_principal();
     return 0;
@@ -249,7 +249,7 @@ void menu_resistencia_led() {
     } while (opcion != 2);
 }
 
-// ===== MENÚ PRINCIPAL =====
+//  MENÚ PRINCIPAL
 void menu_principal() {
     int opcion;
     do {
@@ -273,7 +273,7 @@ void menu_principal() {
     } while (opcion != 5);
 }
 
-// ===== FUNCIÓN PRINCIPAL (MAIN) =====
+//  FUNCIÓN PRINCIPAL (MAIN) 
 int main() {
     menu_principal();
     return 0;

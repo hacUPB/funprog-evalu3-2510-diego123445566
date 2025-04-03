@@ -11,80 +11,108 @@ Este reto consiste en la creación de una calculadora de ingeniería que ofrecer
 SOLUCION
 
 1. Análisis del problema
-Se requiere desarrollar una calculadora que ofrezca herramientas clave para estudiantes de ingeniería eléctrica o electrónica. Estas herramientas incluyen el cálculo de la Ley de Ohm, factor de potencia, resistencia de conductores y resistencias para LED.
+Se requiere desarrollar una calculadora que ofrezca herramientas clave para estudiantes de ingeniería eléctrica o electrónica. Estas herramientas incluyen el cálculo de 
+
+la Ley de Ohm, factor de potencia, resistencia de conductores y resistencias para LED.
 
 2. Descomposición del problema en pequeñas partes
+
 Cada función de la calculadora representa un subproblema independiente que debe analizarse y resolverse de forma modular:
 
 Ley de Ohm: Se deben considerar variables como voltaje (V), corriente (I) y resistencia (R), así como la ecuación fundamental 
+
 𝑉=𝐼⋅𝑅
 
 Cálculo del factor de potencia:identificación de las variables de entrada
 
 Potencia activa (P): Medida en vatios (W).
+
 Potencia aparente (S): Medida en voltamperios (VA).
+
 Ángulo de fase (𝜙): Se puede calcular a partir de P y S.
 
 Cálculo del Factor de Potencia (FP)
 
 Se obtiene mediante la fórmula:
+
 𝐹𝑃=cos⁡(𝜙)=𝑃/𝑆
+
 El programa debe calcular este valor y mostrarlo al usuario.
 
 Cálculo de la Potencia Reactiva (Q)
 
 La potencia reactiva se obtiene con:
+
 𝑄=𝑆⋅sin(𝜙)
 
 Se puede determinar a partir de la relación trigonométrica:
+
 𝑄=sqrt(𝑆2−𝑃2)
 
 Representación de los resultados
 
 Después de realizar los cálculos, el programa debe mostrar:
+
 El factor de potencia (FP = cos⁡(𝜙))
+
 La potencia reactiva (Q)
 
 Estructuras de control necesarias
+
 Validaciones para evitar división por cero cuando 
+
 𝑆=0.
+
 Control de valores negativos o fuera de rango en las entradas.
+
 Conversión de unidades si es necesario.
  
 Esto es esencial en sistemas eléctricos para evaluar la eficiencia y el impacto de cargas inductivas o capacitivas.
 
 Resistencia para LED: Es necesario aplicar la ecuación 
+
 𝑅=𝑉𝑓𝑢𝑒𝑛𝑡𝑒−𝑉𝐿𝐸𝐷/ILED
+
 para determinar el valor adecuado.
 
 3. Identificación de las partes relevantes para cada módulo
+
 Siguiendo el esquema de la imagen, para cada cálculo se deben identificar:
 
 A.Variables de entrada: 
 
 Ley de Ohm
+
 Variables de entrada:
 
 Voltaje (V)
+
 Corriente (I)
+
 Resistencia (R)
 
 Variables de salida:
 
 Voltaje (V), si se calcula con (V=I⋅R)
+
 Corriente (I), si se calcula con (𝐼=𝑉/𝑅)
+
 Resistencia (R), si se calcula con (𝑅=𝑉/𝐼)
 ​
 B.Cálculo del Factor de Potencia
+
 Variables de entrada:
 
 Potencia activa (P)
+
 Potencia aparente (S)
+
 Ángulo de fase (𝜙)
 
 Variables de salida:
 
 Factor de potencia cos(𝜙)
+
 Potencia reactiva (Q), calculada como sqrt(𝑄=𝑆2−𝑃2)
 
 c.Resistencia de un conductor
@@ -92,7 +120,9 @@ c.Resistencia de un conductor
 Variables de entrada:
 
 Resistividad del material (𝜌)
+
 Longitud del conductor (L)
+
 Área de la sección transversal (A)
 
 Variables de salida:
@@ -104,12 +134,15 @@ D.Resistencia para LED
 Variables de entrada:
 
 Voltaje de la fuente (V𝑓𝑢𝑒𝑛𝑡e)
+
 Voltaje del LED (V𝐿𝐸𝐷)
+
 Corriente del LED (I𝐿𝐸𝐷)
 
 Variables de salida:
 
 Valor de la resistencia (R), calculada con 
+
 𝑅=𝑉𝑓u𝑒𝑛𝑡𝑒−𝑉𝐿𝐸𝐷/ILED
 
 #Primer menú
@@ -304,3 +337,4 @@ int main() {
     menu(); // Llamamos al menú principal
     return 0;
 }
+ // este es el codigo pero se ve meor en .c y tambien lo puse em .c
