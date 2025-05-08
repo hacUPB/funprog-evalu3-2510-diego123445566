@@ -174,33 +174,6 @@ void menu_resistencia_conductor() {
     } while (opcion != 2);
 }
 
-//  MENÚ PRINCIPAL 
-void menu_principal() {
-    int opcion;
-    do {
-        printf("===== MENÚ PRINCIPAL =====\n");
-        printf("1. Calcular Ley de Ohm\n");
-        printf("2. Calcular Factor de Potencia\n");
-        printf("3. Calcular Resistencia de un Conductor\n");
-        printf("4. Salir\n");
-        printf("Seleccione una opción: ");
-        scanf("%d", &opcion);
-
-        switch (opcion) {
-            case 1: menu_ley_ohm(); break;
-            case 2: menu_factor_potencia(); break;
-            case 3: menu_resistencia_conductor(); break;
-            case 4: printf("Saliendo del programa...\n"); break;
-            default: printf("Opción no válida. Intente de nuevo.\n\n");
-        }
-    } while (opcion != 4);
-}
-
-// FUNCIÓN PRINCIPAL (MAIN)
-int main() {
-    menu_principal();
-    return 0;
-}
 
 #include <stdio.h>
 
@@ -249,32 +222,3 @@ void menu_resistencia_led() {
     } while (opcion != 2);
 }
 
-//  MENÚ PRINCIPAL
-void menu_principal() {
-    int opcion;
-    do {
-        printf("===== MENÚ PRINCIPAL =====\n");
-        printf("1. Calcular Ley de Ohm\n");
-        printf("2. Calcular Factor de Potencia\n");
-        printf("3. Calcular Resistencia de un Conductor\n");
-        printf("4. Calcular Resistencia para LED\n");
-        printf("5. Salir\n");
-        printf("Seleccione una opción: ");
-        scanf("%d", &opcion);
-
-        switch (opcion) {
-            case 1: menu_ley_ohm(); break;
-            case 2: menu_factor_potencia(); break;
-            case 3: menu_resistencia_conductor(); break;
-            case 4: menu_resistencia_led(); break;
-            case 5: printf("Saliendo del programa...\n"); break;
-            default: printf("Opción no válida. Intente de nuevo.\n\n");
-        }
-    } while (opcion != 5);
-}
-
-//  FUNCIÓN PRINCIPAL (MAIN) 
-int main() {
-    menu_principal();
-    return 0;
-}
